@@ -28,7 +28,7 @@ engine registered after it joins it. Its caption names the databases the project
 | Import a dump… | A modal of the dumps that folder holds for this engine, this project's first; Import asks first, then runs `--import <file>`, which exports the database as it is before it imports |
 | Running statements | `--running`: what runs now, longest first, and the slow statements the server counted |
 | Connection details | `--info`: the engine, version, runtime and service, and how a client on this machine connects |
-| Web admin | On DDEV, the official add-ons (Adminer, phpMyAdmin): Add (`--admin <tool>`, which restarts the project), Open (`/<engine>-admin/<tool>/<folder>/<project>`, a redirect to the address DDEV gives the add-on) and Remove (`--admin-remove <tool>`, asked first) |
+| Web admin | On DDEV, the official add-ons (Adminer, phpMyAdmin): Add (`--admin <tool>`), Open (`/<engine>-admin/<tool>/<folder>/<project>`, a redirect to the address DDEV gives the add-on) and Remove (`--admin-remove <tool>`, asked first). Adding or removing one restarts the project, and DDEV recreates its shared router then: every DDEV site of the machine is unreachable for a few seconds |
 
 An entry that does not fit a database yet is said in its place, not offered: the engine says which, and the base
 says it for the web admins off DDEV (below).
