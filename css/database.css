@@ -1,0 +1,21 @@
+/* The database family: the DATABASE menu, the tables and import modals.
+   Appended to the dashboard stylesheet after the components, so it may only ADD rules.
+   Every database plugin gets these through registerDatabase(); the first one adds the file. */
+
+/* A database's header names its engine, version, runtime and service, or a SQLite file's path: case-sensitive
+   words that must be read as they are, so they opt out of the header's capitals. */
+.act-menu-database-family .database-menu-db { text-transform: none; font-weight: 600; white-space: normal; }
+.act-menu-database-family .database-menu-default { font-weight: 400; opacity: .75; }
+.database-menu-note { text-transform: none; font-weight: 400; opacity: .75; white-space: normal; max-width: 22rem; }
+.database-menu-note code { white-space: normal; overflow-wrap: anywhere; }
+
+/* Tables and sizes: the name column takes what is left, the bar is the share of the largest table. */
+.database-tables-list .database-table-name code { overflow-wrap: anywhere; }
+.database-tables-list .database-table-bar { width: 8rem; }
+.database-tables-list meter { width: 100%; height: .6rem; }
+.database-tables-list caption { caption-side: top; padding-bottom: .25rem; }
+.database-tool-error { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 14rem; overflow: auto; }
+
+/* Import: a dump's name, when and how big, and its button on one line where there is room. */
+.database-import .database-dump { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem .75rem; }
+.database-import .database-dump-name { flex: 1 1 18rem; min-width: 0; overflow-wrap: anywhere; }

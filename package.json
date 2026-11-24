@@ -1,0 +1,37 @@
+{
+  "name": "@webship.co/workspace-database",
+  "version": "1.0.0",
+  "description": "The database family's shared base for Webship Workspace plugins: the DatabaseEngine contract, the readers that say which engine and version a project uses (DDEV, the runtime layer's x-webship block, a compose file of the project's own, SQLite files), and the DATABASE row menu (a console in a screen, export and import, tables and sizes, a web admin) every engine plugin registers through registerDatabase(api, engine).",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "license": "ISC",
+  "engines": {
+    "node": ">=24"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webship/workspace-database.git"
+  },
+  "files": [
+    "dist/src",
+    "css",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build",
+    "test": "npm run build && node --test dist/tests/*.test.js",
+    "lint": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "js-yaml": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@webship.co/workspace-plugin-api": "^1.0.12",
+    "typescript": "^5.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
